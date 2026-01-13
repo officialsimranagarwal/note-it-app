@@ -7,22 +7,6 @@ There will be a menu bar and it will contain two menus and a button:
 File menu
 open: this menuitem is used to open a file
 save: this menuitem is used to save a file
-print : this menuitem is used to print the components of the text area
-new : this menuitem is used to create a new blank file
-Edit menu
-cut: this menuitem is to cut the selected area and copy it to clipboard
-copy: this menuitem is to copy the selected area to the clipboard
-paste : this menuitem is to paste the text from the clipboard to the text area
-Close : this button closes the frame
-
-Program to create a simple text editor:
-To create a simple text editor: 
- 
-
-First, we will create a frame f titled “editor” and apply a metal look and feel and set an ocean theme in it.
-We will add a text area and a menubar with three menu File, Edit, and Close.
-The “File” option has 4 menu items new, open, save and print.
-“Edit” has 3 menu items cut, copy and paste. We will add an action listener to all the menu items(using addActionListener() function) to detect any action.
 We will add the menu items to the menu and menu to the menubar using add() function and we would add the menubar to the frame using addJMenuBar() function.
 We will add the text area to the frame using add function set the size of the frame to 500,500 using setSize(500,500) function and then display the frame using show function.
 Here is how the functions of the menu will be invoked:
