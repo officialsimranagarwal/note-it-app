@@ -1,18 +1,40 @@
-# note-it-app
-noteIt App
-To create a simple text editor in Java Swing we will use a JTextArea, a JMenuBar and add JMenu to it and we will add JMenuItems. All the menu items will have actionListener to detect any action.
-There will be a menu bar and it will contain two menus and a button:
- 
+# NoteIt App (Java Text Editor) 📝
 
-File menu
-open: this menuitem is used to open a file
-save: this menuitem is used to save a file
-We will add the menu items to the menu and menu to the menubar using add() function and we would add the menubar to the frame using addJMenuBar() function.
-We will add the text area to the frame using add function set the size of the frame to 500,500 using setSize(500,500) function and then display the frame using show function.
-Here is how the functions of the menu will be invoked:
- 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Swing](https://img.shields.io/badge/GUI-Swing-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Functional-success?style=for-the-badge)
 
-On selecting the cut, copy, paste and print menu item the inbuilt functions of text area cut(), copy(), paste() and print() will be invoked.
-On selecting “save” menu item, a file chooser will get opened which will show the save dialog after selecting a file the filewriter(buffered writer) would write the contents of the text area to the file and close the file writer and buffered writer.
-On selecting “open” menu item, a file chooser will get opened which will show the open dialog after selecting a file a file reader and a buffered reader would read the file and set the text of the text area to the contents of the file.
-If the “new” menu item is selected the text of the text area will be set to blank. If “close” menu item is selected the frame is closed by using the function isVisible(false).
+## 📖 Overview
+
+**NoteIt** is a lightweight, GUI-based text editor built using **Java Swing**. It provides essential text processing features in a clean, desktop interface using the "Ocean" theme.
+
+## ✨ Features
+
+-   **File Operations**: Create New, Open existing, and Save files.
+-   **Editing Tools**: Cut, Copy, and Paste text.
+-   **Printing**: Print documents directly from the editor.
+-   **Theming**: Uses the native Metal Look and Feel with the Ocean theme.
+
+## 🚀 Usage
+
+1.  **Compile**:
+    ```bash
+    javac code.java
+    ```
+2.  **Run**:
+    ```bash
+    java editor
+    ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## 👤 Author
+
+**Simran Agarwal**
+-   [Profile](https://github.com/officialsimranagarwal)
+-   [LinkedIn](https://linkedin.com/in/simran-agarwal-54751b191)
+
+---
+*Generated with ❤️ by Simran Agarwal*
