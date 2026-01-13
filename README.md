@@ -1,27 +1,44 @@
 # NoteIt App (Java Text Editor) 📝
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Swing](https://img.shields.io/badge/GUI-Swing-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Functional-success?style=for-the-badge)
+![Swing](https://img.shields.io/badge/GUI-Swing_Framework-blue?style=for-the-badge)
+![Event Driven](https://img.shields.io/badge/Pattern-Event_Driven-success?style=for-the-badge)
 
 ## 📖 Overview
 
-**NoteIt** is a lightweight, GUI-based text editor built using **Java Swing**. It provides essential text processing features in a clean, desktop interface using the "Ocean" theme.
+**NoteIt** is a functional desktop text editor built with **Java Swing**. It showcases the implementation of a graphical user interface (GUI) with file I/O operations and native system integration.
 
-## ✨ Features
+## 🏗️ Software Architecture
 
--   **File Operations**: Create New, Open existing, and Save files.
--   **Editing Tools**: Cut, Copy, and Paste text.
--   **Printing**: Print documents directly from the editor.
--   **Theming**: Uses the native Metal Look and Feel with the Ocean theme.
+### Component Hierarchy (`extends JFrame`)
+The main class `editor` extends `JFrame`, serving as the primary window container.
+-   **`JTextArea`**: One central component for text input, filling the center of the LayoutManager.
+-   **`JMenuBar`**: Hosts the File and Edit menus.
+-   **`JMenuItem`**: Triggers specific actions (Cut, Copy, Paste, Save).
 
-## 🚀 Usage
+### Listeners & Event Handling
+The class implements the `ActionListener` interface to handle user interactions via `actionPerformed(ActionEvent e)`.
+-   **Command Pattern**: The method switches on `e.getActionCommand()` to route logic (e.g., if "cut" -> call `t.cut()`).
+-   **Clipboard Operations**: Leveraging built-in `JTextComponent` methods (`cut()`, `copy()`, `paste()`) to interact with the system clipboard.
 
-1.  **Compile**:
+### File I/O Implementation
+-   **Opening Files**:
+    -   `JFileChooser`: Provides a native file selection dialog.
+    -   `FileReader` & `BufferedReader`: Reads character streams line-by-line and appends them to the text area.
+-   **Saving Files**:
+    -   `FileWriter` & `BufferedWriter`: Writes the content of the `JTextArea` back to the disk.
+
+## 🎨 Theming
+
+The application explicitly sets the **Metal Look and Feel** with the **OceanTheme** via `UIManager.setLookAndFeel()`, ensuring a consistent cross-platform appearance.
+
+## 🚀 Execution
+
+1.  Compile:
     ```bash
     javac code.java
     ```
-2.  **Run**:
+2.  Run:
     ```bash
     java editor
     ```
